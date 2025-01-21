@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ea511f;
+    --secondary-color: #ffffff;
+    --cards-color: #E1F2FE;
+    --title-color: #fff;
+    --text-color: black;
+}
+
+body {
+    font-family: 'Inter', sans-serif;  
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {    
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav {
+    height: 5rem;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--secondary-color);
+    border-bottom: solid 2px var(--primary-color);
+}
+
+nav h2 {
+    color: var(--text-color);
+    padding-left: 60px;
+    font-size: 30px;
+    font-weight: 600;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-right: 60px;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--text-color);
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+ .title {
+    height: 6rem;
+    width: 100%;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+.title h1 {
+    text-transform:  uppercase;
+    font-size: 1.7rem;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+}
+
+main {
+    flex:1;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.card { 
+    margin: 30px;
+    height: auto;
+    width: 25rem;
+    background: var(--cards-color);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    color: var(--primary-color);
+    padding: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.card h3 {
+    padding: 0 0 10px 0;
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+    color: #e69333;
+}
+
+figure {
+    margin: 30px 0 4px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+figure img {
+    margin:  0 2rem 0 2rem;
+    max-width: 100%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+
+}
+
+p {
+    margin: 0px 20px 0px 20px;
+    padding: 10px;
+    font-weight: normal;
+    color: var(--name-color);
+}
+
+i {
+    margin: 0px 15px 0 0;
+    color: var(--name-color);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    display: block;
+    justify-self: center;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #FAD961;
+    background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+    color: var(--title-color);
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 10rem;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    letter-spacing: 2px;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        flex-direction: column;
+    }
+    nav {
+        flex-direction: column;
+        height: auto;
+    }
+
+    nav h2{
+        font-size: 1.8em;
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    nav ul{
+        flex-direction: flex;
+        text-align: center;
+        margin: 20px;
+    }
+
+    header {
+        display: inline-block;
+    }
+
+    section .title{
+        width: 100%;
+        font-size: 1.1em;
+    }
+
+    .title{
+         margin-top: 50px;
+    
+    }
+
+    .card {
+        width: 80%;
+    }
+
+}
